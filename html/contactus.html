@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<body>
+     <header>
+ <nav>
+    <img src="../assets/chefnozylogo.png" alt="Chef Nozy logo" width="80px">
+        <a href="homepage.html">Home</a>
+        <a href="aboutus.html">About Me </a>
+        <a href="ourservices.html">My Services </a>
+        <a href="gallerymenu.html">Gallery & Menus</a>
+        <a href="contactus.html">Contact Me</a>
+<hr>
+ </nav>
+    </header>
+<main>
+    <h1>Let's Talk</h1>
+    <img src="../assets/chefnozy.jpg" alt="Chef Nozy Portrait" width="300px">
+
+    <p>
+        Planning your next event or meal?
+    </p>
+    <p>
+        Contact me to talk about your needs, availability and begin planning a menu that works best with your needs. 
+        It could be a small party or a private dinner, all enquiries are welcome.
+    </p>
+
+    <h2>Booking Request Form</h2>
+    <p>
+        To submit your booking enquiry, please fill in the form below.
+    </p>
+
+    <form>
+
+    <!--Required fields ensure all booking requests contain essential information, reducing back and forth communication and improving efficiency-->
+
+    <label>Full Name</label><br>
+    <input type="text" name="fullname" placeholder="Jane Doe" required><br><br>
+
+    <label>Email Address</label><br>
+    <input type="email" name="email" placeholder="name@domain.com" required><br><br>
+
+    <label>Contact Number</label><br>
+    <input type="tel" name="phone" placeholder="0712345678" required maxlength="10"><br><br>
+
+    <label>Event Date</label><br>
+    <input type="date" name="eventdate" required><br><br>
+
+    <label>Number of Guests</label><br>
+    <input type="number" name="guests" required  min="1"><br><br>
+
+    <label>Type of Service</label><br>
+    <select name="service" required>
+        <option value="">-- Select a service --</option>
+        <option>Private Chef Experience</option>
+        <option>Event Catering</option>
+        <option>Custom Menu Planning</option>
+        <option>Meal Prep Services</option>
+    </select><br><br>
+
+    <!--This field is not required. Clients can submit the form even if it's empty, so it's optional as not everyone has special requests-->
+
+    <label>Other Notes or Special Requests (optional)</label><br>
+    <textarea name="notes" placeholder="Any allergies, themes or special requests?"></textarea><br><br>
+
+    <input type="submit" value="Submit Request">
+
+</form>
+
+    <h2>Contact Information</h2>
+    <p>
+        You can contact me using the following information:
+    </p>
+    <p>
+        Email: <a href="mailto:info@chefnozy.co.za">info@chefnozy.co.za</a><br>
+        Phone: 069 448 2295<br>
+        Location: <a href="https://www.google.com/maps/dir//Walkerville/@-26.4161764,27.956057" target="_blank">
+             Walkerville, Johannesburg South, Gauteng, South Africa </a>
+    </p>
+
+    <h3>Find Me Here</h3>
+    <iframe 
+  src="https://www.google.com/maps?q=-26.4241876,27.9633039&hl=en&z=13&output=embed"
+  width="50%" 
+  height="200" 
+  style="border:0; border-radius:12px;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+<br>
+        <img src="../assets/workstation.webp" alt="chef workstation and tools" width="300px">
+    <h2>Social Media Links</h2>
+    <p>
+        Keep in touch and see more food content and updates:
+    </p>
+    <ul>
+       <li><a href="https://instagram.com/chef_nozy" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com/chefnozy" target="_blank">Facebook</a></li>
+        <li><a href="https://wa.me/c/27694482295" target="_blank">WhatsApp</a></li>
+    </ul>
+
+    <h2>Response Time</h2>
+    <p>
+        Responses are typically within 24-48 hours. Early bookings are recommended to secure your preferred date. 
+    </p>
+</main>
+<footer>  
+    <hr>
+     <p style="text-align: center;"> 
+        © 2026 Chef Nozy by Nozithelo Ntini | All Rights Reserved
+    </p>
+</footer>
+</body>
+</html>
