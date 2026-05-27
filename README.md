@@ -107,6 +107,13 @@ Part 2 and Part 3 will include further development, styling and advanced functio
 * Established timeline and milestones
 * Uploaded html files, pictures and documents
 
+**Version 2.0 - Second Submission CSS**
+* Added CSS styling and layout
+* Updated comment lines
+* Implemented responsive design
+* Enhanced user experience
+* Fixed bugs and improved functionality
+* Uploaded updated HTML and CSS files
 
 ## Design and User Experience
 
