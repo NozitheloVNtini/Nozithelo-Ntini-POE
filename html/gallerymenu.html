@@ -4,155 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery & Menus</title>
+    
+    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet is used to maintain consistent styling across all website pages -->
 </head>
 <body>
-     <header>
- <nav>
-    <img src="../assets/chefnozylogo.png" alt="Chef Nozy logo" width="80px">
-        <a href="homepage.html">Home</a>
-        <a href="aboutus.html">About Me </a>
-        <a href="ourservices.html">My Services </a>
-        <a href="gallerymenu.html">Gallery & Menus</a>
-        <a href="contactus.html">Contact Me</a>
-<hr>
- </nav>
+    <header>
+        <nav class="main-nav">
+            <img src="../assets/chefnozylogo.png" alt="Chef Nozy logo" width="80px" class="nav-logo">
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="aboutus.html">About Me </a>
+                <a href="ourservices.html">My Services </a>
+                <a href="gallerymenu.html">Gallery & Menus</a>
+                <a href="contactus.html">Contact Me</a>
+            </div>
+            <hr class="nav-divider">
+        </nav>
     </header>
-<main>
-    <h1>Gallery</h1>
-        <img src="../assets/octopussalad.jpg" alt="small octopus salad plates" width="300px" height="300px"> <img src="../assets/tuile.jpg" alt="crispy tuile with creme anglaise and stewed pears" width="300px" height="300px">
-    <p>
-        Browse through some of my sample menus and previous culinary delights. Every dish is made with consideration of taste, 
-        appearance and the general dining experience.
-    </p>
 
-    <p>
-        Menus may be tailored to accommodate various events, tastes and dietary needs so that each client receives something suited to meet their needs.
-    </p>
+    <main>
+        <section id="gallery-intro" class="section">
+            <h1>Gallery</h1>
+            <img src="../assets/foodspread.jpg" alt="food spread" width="300px" class="section-image">
+            <p>
+                Browse through some of my sample menus and previous culinary delights. Every dish is made with consideration of taste, 
+                appearance and the general dining experience.
+            </p>
+            <p>
+                Menus may be tailored to accommodate various events, tastes and dietary needs so that each client receives something suited to meet their needs.
+            </p>
+        </section>
 
-    <h2>1. Previous Menus I've Catered</h2>
-        <img src="../assets/gumbo.avif" alt="gumbo limbo menu" width="500px" height="500px">
-        <img src="../assets/chefstablemenu.jpg" alt="chef's table menu" width="500px" height="500px">
-        <img src="../assets/nolita.jpg" alt="nolita menu" width="500px" height="500px"> 
-     <br>
-        <h2>Examples Of Menus I Can Create</h2>
-     <p>
-        The following are some of the menu options I can make for you. These menus are tailored to suit the nature of event and the preferences of clients.
-    </p>
+        <section id="previous-menus" class="section">
+            <h2>1. Previous Menus I've Catered</h2>
+            <img src="../assets/menuboard.jpg" alt="menu board" width="300px" class="section-image">
+            <img src="../assets/foodplating.jpg" alt="food plating" width="300px" class="section-image">
+            
+            <h3>Examples Of Menus I Can Create</h3>
+            <p>
+                The following are some of the menu options I can make for you. These menus are tailored to suit the nature of event and the preferences of clients.
+            </p>
 
-    <h3>Private Chef Experience Sample Menu</h3>
+            <div class="menu-card">
+                <h4>Private Chef Experience Sample Menu</h4>
+                <div class="menu-section">
+                    <p><b>To Begin</b></p>
+                    <ul>
+                        <li>Creamy wild mushroom soup finished with fresh herbs, served with toasted artisanal bread</li>
+                        <li>or</li>
+                        <li>Fresh garden salad with a light vinaigrette and seasonal toppings</li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <p><b>Main Experience</b></p>
+                    <ul>
+                        <li>Herb roasted chicken with garlic butter, served with seasonal roasted vegetables</li>
+                        <li>or</li>
+                        <li>Pan seared beef fillet with creamy mashed potatoes and sauteed greens</li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <p><b>Something Sweet</b></p>
+                    <ul>
+                        <li>Warm malva pudding served with caramel sauce and custard</li>
+                        <li>or</li>
+                        <li>Classic creme brulee with a caramelised sugar crust</li>
+                    </ul>
+                </div>
+            </div>
 
-<h4>To Begin</h4>
-<p>
-    Creamy wild mushroom soup finished with fresh herbs, served with toasted artisanal bread<br>
-    or<br>
-    Fresh garden salad with a light vinaigrette and seasonal toppings
-</p>
+            <div class="menu-card"> <!--Menu card displays a sample private chef dining experiences--> 
+                <h4>Event Catering Sample Menu</h4>
+                <div class="menu-section">
+                    <p><b>Finger Foods / Starters</b></p>
+                    <ul>
+                        <li>Seared tuna salad cups with citrus dressing</li>
+                        <li>Gourmet mini beef sliders with caramelised onions</li>
+                        <li>Grilled chicken skewers with a savoury glaze</li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <p><b>Main Options</b></p>
+                    <ul>
+                        <li>Oven baked creamy pasta with Italian herbs</li>
+                        <li>Grilled chicken portions with signature seasoning</li>
+                        <li>Flavoured rice with roasted vegetables</li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <p><b>Desserts</b></p>
+                    <ul>
+                        <li>Baked vanilla cheesecake with berry compote</li>
+                        <li>Silky panna cotta with fruit coulis</li>
+                        <li>Mini milk tart slices with a cinnamon dusting</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<h4>Main Experience</h4>
-<p>
-    Herb roasted chicken with garlic butter, served with seasonal roasted vegetables<br>
-    or<br>
-    Pan seared beef fillet with creamy mashed potatoes and sauteed greens
-</p>
+        <section id="custom-menu" class="section">
+            <h3>Custom Menu Option</h3>
+            <img src="../assets/custommenu.jpg" alt="custom menu planning" width="300px" class="section-image">
+            <p>
+                Menus can also be fully customised based on:
+            </p>
+            <ul>
+                <li>Dietary requirements (e.g. vegan options)</li>
+                <li>Event theme</li>
+                <li>Preferred cuisines</li>
+                <li>Number of guests</li>
+            </ul>
+            <p>
+                Clients work directly with me to create a menu that fits their event perfectly.
+            </p>
+        </section>
 
-<h4>Something Sweet</h4>
-<p>
-    Warm malva pudding served with caramel sauce and custard<br>
-    or<br>
-    Classic creme brulee with a caramelised sugar crust
-</p>
+        <section id="past-dishes" class="section">
+            <h2>2. Past Dishes and Events.</h2>
+            <p>
+                Take a look at some of the preparations and installations done to previous customers.
+            </p>
+            <p>
+                Whether it is a plated meal or a complete event setup, there is a balance of creativity and detail that is reflected in every presentation.
+            </p>
+            <p>The gallery highlights:</p>
+            <ul>
+                <li>Individually plated dishes</li>
+                <li>Event table setups</li>
+                <li>Catering displays</li>
+                <li>Dessert presentations</li>
+            </ul>
+            
+            <div class="gallery-grid">
+                <img src="../assets/dish1.jpg" alt="plated dish 1" width="300px" class="gallery-img">
+                <img src="../assets/dish2.jpg" alt="plated dish 2" width="300px" class="gallery-img">
+                <img src="../assets/setup1.jpg" alt="event setup 1" width="300px" class="gallery-img">
+                <img src="../assets/setup2.jpg" alt="event setup 2" width="300px" class="gallery-img">
+            </div>
+        </section>
 
-<img src="../assets/malva.jpg" alt="malva pudding" width="300px">
+        <section id="expectations" class="section">
+            <h3>What to Expect</h3>
+            <p>All dishes are made with:</p>
+            <ul>
+                <li>Fresh and well chosen ingredients.</li>
+                <li>Clearly and attractive presentation.</li>
+                <li>Flavour and balance.</li>
+            </ul>
+            <p>
+                The aim of this is to make meals that are not just tasty but also to make your event worthwhile.
+            </p>
+        </section>
 
+        <section id="cta" class="section"> <!-- Call to action section encourages users to contact the chef for bookings --> 
+            <h3>Saw something you like?</h3>
+            <p>
+                <a href="contactus.html">Contact me</a> to create your own menu and make your event happen.
+            </p>
+        </section>
+    </main>
 
-<h3>Event Catering Sample Menu</h3>
-
-<h4>Finger Foods / Starters</h4>
-<ul>
-    <li>Seared tuna salad cups with citrus dressing</li>
-    <li>Gourmet mini beef sliders with caramelised onions</li>
-    <li>Grilled chicken skewers with a savoury glaze</li>
-</ul>
-
-<h4>Main Options</h4>
-<ul>
-    <li>Oven baked creamy pasta with Italian herbs</li>
-    <li>Grilled chicken portions with signature seasoning</li>
-    <li>Flavoured rice with roasted vegetables</li>
-</ul>
-
-<h4>Desserts</h4>
-<ul>
-    <li>Baked vanilla cheesecake with berry compote</li>
-    <li>Silky panna cotta with fruit coulis</li>
-    <li>Mini milk tart slices with a cinnamon dusting</li>
-</ul>
-
-<img src="../assets/tunasalad.jpg" alt="tuna salad plates" width="300px">
-    <h3>Custom Menu Option</h3>
-        <img src="../assets/menuonplate.jpg" alt="menu mockup" width="300px">
-
-    <p>
-        Menus can also be fully customised based on:
-    </p>
-
-    <ul> <!--used unordered list to clearly present key customisation factors.
-        Bullet points improve readability and allow users to quickly scan the available options 
-        without reading large blocks of text-->
-        <li>Dietary requirements (e.g. vegan options)</li>
-        <li>Event theme</li>
-        <li>Preferred cuisines</li>
-        <li>Number of guests</li>
-    </ul>
-
-    <p>
-        Clients work directly with me to create a menu that fits their event perfectly.
-    </p>
-
-    <h2>2. Past Dishes and Events.</h2>
-    <p>
-        Take a look at some of the preparations and installations done to previous customers.
-    </p>
-    <p>
-        Whether it is a plated meal or a complete event setup, there is a balance of creativity and detail that is reflected in every presentation.
-    </p>
-
-    <p>The gallery highlights:</p>
-    <ul>
-        <li>Individually plated dishes</li>
-        <li>Event table setups</li>
-        <li>Catering displays</li>
-        <li>Dessert presentations</li>
-    </ul>
-
-    <img src="../assets/branzino.jpg" alt="plated dish" width="350px" height="400px">
-    <img src="../assets/eventsetup.jpeg" alt="Event setup" width="350px" height="400px">
-    <img src="../assets/cateringdisplay.webp" alt="Catering display" width="350px" height="400px">
-    <img src="../assets/spirulinabowl.jpg" alt="Breakfast presentation" width="350px" height="400px">
-
-    <h2>What to Expect</h2>
-    <p>All dishes are made with:</p>
-    <ul>
-        <li>Fresh and well chosen ingredients.</li>
-        <li>Clearly and attractive presentation.</li>
-        <li>Flavour and balance.</li>
-    </ul>
-
-    <p>
-        The aim of this is to make meals that are not just tasty but also to make your event worthwhile.
-    </p>
-
-    <h2>Saw something you like?</h2>
-    <p>
-        <a href="contactus.html">Contact me</a> to create your own menu and make your event happen.
-    </p>
-</main>
-    <footer>  
-    <hr>
-     <p style="text-align: center;"> 
-        © 2026 Chef Nozy by Nozithelo Ntini | All Rights Reserved
-    </p> 
-</footer>
-
+    <footer class="site-footer">  
+        <hr class="footer-divider">
+        <p class="footer-text"> 
+            © 2026 Chef Nozy by Nozithelo Ntini | All Rights Reserved
+        </p> 
+    </footer>
 </body>
 </html>
