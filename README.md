@@ -114,6 +114,9 @@ Part 2 and Part 3 will include further development, styling and advanced functio
 * Enhanced user experience
 * Fixed bugs and improved functionality
 * Uploaded updated HTML and CSS files
+* Replaced some old photos with new ones
+* Added longer content in About Me page so users know Chef Nozy better
+* Added Media Queries to make the website responsive
 
 ## Design and User Experience
 
@@ -276,6 +279,14 @@ Ridwan, A. M., 2023. The menu offers dishes from light to heavy meals. [Online]
 Available at: <https://www.shutterstock.com/image-photo/menu-offers-dishes-light-heavy-meals-2370734059?trackingId=2f309b30-56c9-488c-a7a0-71fcd386da89&listId=searchResults>
 [Accessed 16 April 2026].
 
+ruks_cookhouse, 2025. Post.
+[screenshot] Available at:
+<https://www.tiktok.com/@ruks_cookhouse/video/7641230956896062742>[Accessed 28 May 2026].
+
+Ryzhkov, 2020. Seafood assorted closeup view stock photo. [Online]
+Available at: <https://www.istockphoto.com/photo/seafood-assorted-closeup-view-gm1213138919-352434857>
+[Accessed 28 May 2026].
+
 The Califonia Beach Co, 2022. Tips for Hosting a Backyard Birthday Party for Young Children. [Online]
 Available at: <https://thecaliforniabeachco.com/blogs/caring-for-young-children/tips-for-hosting-a-backyard-birthday-party-for-young-children?srsltid=AfmBOoq69dgx4Xgzr244yugxh3-LRlrbP-qmEdeWzjsTw2AaHCHwx2bb>
 [Accessed 17 April 2026].
@@ -292,6 +303,14 @@ Wandrag, J., 2023. The Benefits of Learning Vanilla HTML, CSS, and JavaScript as
 Available at: <https://medium.com/@jason_wandrag_the_web_wizard/the-benefits-of-learning-vanilla-html-css-and-javascript-as-a-wizard-fe62d08b8624>
 [Accessed 12 March 2026].
 
+whatsoninjoburg, 2025. Post.
+[image online] Available at:
+<https://www.instagram.com/p/DNSpPh4sc2h/?img_index=8/>[Accessed 28 May 2026].
+
+W3Schools, 2026. CSS Tutorial. [Online] Available at: <https://www.w3schools.com/css/> [Accessed 29 May 2026].
+
 Zigic, D., 2024. Multiracial group of happy friends enjoying in their gathering in a bar.. [Online]
 Available at: <https://www.shutterstock.com/image-photo/multiracial-group-happy-friends-enjoying-their-2452067427?irclickid=3uPVf2zonxyZRuMXfdWRXzVCUku3Eiw4g1AuRE0&irgwc=1&afsrc=1&pl=5249686-560528&utm_medium=Affiliate&utm_campaign=BigstockAffiliate&utm_source=5249686>
 [Accessed 7 April 2026].
+
+Zhipu AI, 2026. CodeGeex (Version 2.27.6) [VS Code Extension]. [Online] Available at: visualstudio.com [Accessed 29 May 2026].
