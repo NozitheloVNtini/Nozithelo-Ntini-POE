@@ -37,3 +37,61 @@ body {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-accent-blueblack);
+  margin-bottom: 15px;
+}
+
+h1 { font-size: 2.8rem; line-height: 1.1; }
+h2 { font-size: 2.2rem; margin-bottom: 20px; position: relative; display: inline-block;}
+
+/*Gold underline under Heading 2s */
+h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent-gold);
+  bottom: -8px;
+  left: 0;
+}
+
+h3 { font-size: 1.5rem; color: var(--color-accent-gold); margin-top: 10px; }
+h4 { font-size: 1.2rem; color: var(--color-accent-blueblack); margin-top: 15px; }
+
+p {
+  color: var(--color-text-secondary);
+  margin-bottom: 15px;
+}
+
+b {
+  color: var(--color-accent-blueblack);
+  font-weight: 600;
+}
+
+ul {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  color: var(--color-text-secondary);
+}
+
+li { margin-bottom: 8px; }
+
+a {
+  color: var(--color-accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent-red);
+}
+
+img {
+  border-radius: 8px;
+}
+
+
