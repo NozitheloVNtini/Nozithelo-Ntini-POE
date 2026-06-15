@@ -31,6 +31,7 @@ body {
   color: var(--color-text-primary);
   line-height: 1.6;
   animation: fadeIn 0.8s ease-in; 
+  padding-top: 100px;
 }
 
 @keyframes fadeIn  /*Fade in animation for body*/{ 
@@ -96,11 +97,26 @@ img {
 
 /*Navigation*/
 .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+
   text-align: center;
   padding: 30px 5% 0 5%;
   background-color: var(--color-ivory);
 
+  z-index: 1000;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* when hidden on scroll down */
+.nav-hidden {
+  transform: translateY(-100%);
+}
+
 
 .nav-logo {
   display: block;
