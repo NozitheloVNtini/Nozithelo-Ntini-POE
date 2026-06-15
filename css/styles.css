@@ -99,6 +99,7 @@ img {
   text-align: center;
   padding: 30px 5% 0 5%;
   background-color: var(--color-ivory);
+
 }
 
 .nav-logo {
@@ -126,6 +127,10 @@ img {
   letter-spacing: 2px;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
+  text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -140,6 +145,15 @@ img {
   margin-top: 25px;
 }
 
+.nav-links a:hover {
+    color: #d35400;
+}
+
+.nav-links a.active {
+    color: #d35400;
+    font-weight: bold;
+    border-bottom: 3px solid #d35400;
+}
 /*Hero Image*/
 .hero-image {
     /* landscape cover image style */
@@ -295,6 +309,7 @@ img {
   line-height: 1;
 }
 
+
 /* Image gallery */
 #gallery {
   background-color: var(--color-bg-secondary);
@@ -346,7 +361,7 @@ img {
   color: var(--color-ivory);
   padding: 100px 10%;
   position: relative;
-  overflow: hidden;
+  
 }
 
 /*Decorative background shape */
