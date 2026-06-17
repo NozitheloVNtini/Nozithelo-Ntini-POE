@@ -303,14 +303,21 @@ img {
   transform: translateX(-50%); /* Center the gold underline */
 }
 
-.testimonial-item {
+.testimonial-item { /* Individual testimonial card styling */
   background-color: var(--color-ivory);
   padding: 30px;
-  margin-bottom: 30px;
+  min-width: 400px;
+  flex-shrink: 0;
+  margin-bottom: 0;
   border-radius: 8px;
   position: relative;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   border-top: 3px solid var(--color-accent-gold);
+}
+
+.testimonial-item.active {
+  display: block;
+  opacity: 1;
 }
 
 /*Adds a big decorative quote mark */
@@ -323,6 +330,37 @@ img {
   top: -10px;
   left: 20px;
   line-height: 1;
+}
+
+/* Container hides overflow */
+.testimonial-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Track: flex row that animates like a moving conveyor belt */
+.testimonial-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+
+  animation: marquee 60s linear infinite;
+}
+
+/* Pauses animation when user hovers over testimonials */
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee { /* Keyframe animation for horizontal scrolling effect */
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 

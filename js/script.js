@@ -1,3 +1,4 @@
+//sticky navigation tab when scrolling up
 document.addEventListener("DOMContentLoaded", () => {
   let lastScrollY = window.scrollY;
   const nav = document.querySelector(".main-nav");
