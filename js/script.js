@@ -95,3 +95,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const calcBtn = document.getElementById("calc-btn");
+  const guestInput = document.getElementById("guest-input");
+  const costOutput = document.getElementById("cost-output");
+  if (calcBtn) {
+    calcBtn.addEventListener("click", () => {
+      const guests = parseInt(guestInput.value) || 0;
+      const cost = guests * 350;
+      costOutput.textContent = `Estimated Cost: R ${cost.toLocaleString()}`;
+    });
+  }
+});
