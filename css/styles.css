@@ -228,19 +228,6 @@ img {
     padding: 0 20px; 
 }
 
-.hero-image img {
-  width: 85%;
-  max-width: 900px;
-  height: auto;
-  border: 5px solid var(--color-ivory);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  transition: transform 0.5s ease;
-}
-
-.hero-image img:hover {
-  transform: scale(1.01);
-}
-
 /* Sections */
 .section {
   padding: 20px 10%;

@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".main-nav");
   const toggle = document.querySelector(".nav-toggle");
-  document.addEventListener("DOMContentLoaded", () => {
+
   if (!nav || !toggle) return; // Safety check
 
   // Sticky navigation
@@ -93,10 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
         searchBtn.click();
       }
     });
-  }
-});
+  };
 
-
+// calculate estimate guest costs
 document.addEventListener("DOMContentLoaded", () => {
   const calcBtn = document.getElementById("calc-btn");
   const guestInput = document.getElementById("guest-input");
@@ -109,3 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
