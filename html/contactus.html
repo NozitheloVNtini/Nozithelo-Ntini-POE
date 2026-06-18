@@ -26,54 +26,85 @@
     </header>
 
     <main>
+        <main>
+        <!-- 1. Contact Me -->
+           
         <section id="contact-intro" class="section">
-            <h1>Let's Talk</h1>
-            <img src="../assets/chefnozy.jpg" alt="Chef Nozy Portrait" width="300px" class="section-image">
-
+            <h1>Contact Me</h1>
+             <img src="../assets/chefnozy.jpg" alt="Chef Nozy Portrait" width="300px" class="section-image">
             <p>
-                Planning your next event or meal?
-            </p>
-            <p>
-                Contact me to talk about your needs, availability and begin planning a menu that works best with your needs. 
-                It could be a small party or a private dinner, all enquiries are welcome.
+                Planning your next event or meal? Contact me to talk about your needs, availability and begin planning a menu that works best with you.
             </p>
         </section>
 
-        <section id="booking-form" class="section">
-            <h2>Booking Request Form</h2>
+        <!-- 2. Email, Phone, Location -->
+        <section id="contact-details" class="section">
+            <h2>Contact Details</h2>
             <p>
-                To submit your booking enquiry, please fill in the form below.
+                Email: <a href="mailto:info@chefnozy.co.za">info@chefnozy.co.za</a><br>
+                Phone: 069 448 2295<br>
+                Location: <a href="https://www.google.com/maps/dir//Walkerville/@-26.4161764,27.956057" target="_blank">
+                     Walkerville, Johannesburg South, Gauteng, South Africa </a>
             </p>
+        </section>
 
+        <!-- 3. General Contact Form -->
+        <section id="general-contact-form" class="section">
+            <h2>General Contact Form</h2>
+            <p>
+                Have a general question, feedback, or would like to discuss a potential collaboration?
+Use the contact form below and I will get back to you as soon as possible.
+            </p>
             <form class="contact-form">
-
-                <!--Required fields ensure all booking requests contain essential information, reducing back and forth communication and improving efficiency-->
-
-                <div class="form-group"> <!-- Form groups are used to keep labels and inputs visually organised and easier to style with CSS -->
+                <div class="form-group">
                     <label for="fullname">Full Name</label><br>
                     <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
                 </div>
-
                 <div class="form-group">
                     <label for="email">Email Address</label><br>
                     <input type="email" id="email" name="email" placeholder="name@domain.com" required>
                 </div>
-
                 <div class="form-group">
                     <label for="phone">Contact Number</label><br>
-                    <input type="tel" id="phone" name="phone" placeholder="0712345678" required maxlength="10">
+                    <input type="tel" id="phone" name="phone" placeholder="0712345678" maxlength="10">
                 </div>
+                <div class="form-group">
+                    <label for="notes">Message</label><br>
+                    <textarea id="notes" name="notes" placeholder="Write your message here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Send Message" class="submit-btn">
+                </div>
+            </form>
+        </section>
 
+        <!-- 4. Catering Enquiry Form -->
+        <section id="booking-form" class="section">
+            <h2>Catering Enquiry Form</h2>
+            <p>
+                Planning an event? Complete the enquiry form below with your event details so that I can provide a customised menu and quotation.
+            </p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="catering-name">Full Name</label><br>
+                    <input type="text" id="catering-name" name="catering-name" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="catering-email">Email Address</label><br>
+                    <input type="email" id="catering-email" name="catering-email" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="catering-phone">Contact Number</label><br>
+                    <input type="tel" id="catering-phone" name="catering-phone" placeholder="0712345678" required maxlength="10">
+                </div>
                 <div class="form-group">
                     <label for="eventdate">Event Date</label><br>
                     <input type="date" id="eventdate" name="eventdate" required>
                 </div>
-
                 <div class="form-group">
                     <label for="guests">Number of Guests</label><br>
                     <input type="number" id="guests" name="guests" required min="1">
                 </div>
-
                 <div class="form-group">
                     <label for="service">Type of Service</label><br>
                     <select id="service" name="service" required>
@@ -84,34 +115,19 @@
                         <option>Meal Prep Services</option>
                     </select>
                 </div>
-
-                <!--This field is not required. Clients can submit the form even if it's empty, so it's optional as not everyone has special requests-->
-
                 <div class="form-group">
-                    <label for="notes">Other Notes or Special Requests (optional)</label><br>
-                    <textarea id="notes" name="notes" placeholder="Any allergies, themes or special requests?"></textarea>
+                    <label for="catering-notes">Other Notes or Special Requests (optional)</label><br>
+                    <textarea id="catering-notes" name="catering-notes" placeholder="Any allergies, themes or special requests?"></textarea>
                 </div>
-
                 <div class="form-group">
                     <input type="submit" value="Submit Request" class="submit-btn">
                 </div>
-
             </form>
         </section>
 
-        <section id="contact-info" class="section">
-            <h2>Contact Information</h2>
-            <p>
-                You can contact me using the following information:
-            </p>
-            <p>
-                Email: <a href="mailto:info@chefnozy.co.za">info@chefnozy.co.za</a><br>
-                Phone: 069 448 2295<br>
-                Location: <a href="https://www.google.com/maps/dir//Walkerville/@-26.4161764,27.956057" target="_blank">
-                     Walkerville, Johannesburg South, Gauteng, South Africa </a>
-            </p>
-
-            <h3>Find Me Here</h3> <!--Embedded Google Map helps users locate the business more easily without leaving the website-->
+        <!-- 5. Find Me & Google Map -->
+        <section id="find-me" class="section">
+            <h2>Find Me</h2>
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps?q=-26.4241876,27.9633039&hl=en&z=13&output=embed"
@@ -119,31 +135,14 @@
                     height="200" 
                     class="map-iframe" 
                     allowfullscreen="" 
-                    loading="lazy"> <!-- Lazy loading improves page performance by only loading the map when needed -->
+                    loading="lazy">
                 </iframe>
             </div>
             <br>
             <img src="../assets/workstation.webp" alt="chef workstation and tools" width="300px" class="section-image">
         </section>
+    </main>
 
-        <section id="social-media" class="section">
-            <h2>Social Media Links</h2> <!--External social media links allow users to engage with the brand across multiple platforms-->
-            <p>
-                Keep in touch and see more food content and updates:
-            </p>
-            <ul class="social-links">
-                <li><a href="https://instagram.com/chef_nozy" target="_blank">Instagram</a></li>
-                <li><a href="https://facebook.com/chefnozy" target="_blank">Facebook</a></li>
-                <li><a href="https://wa.me/c/27694482295" target="_blank">WhatsApp</a></li>
-            </ul>
-        </section>
-
-        <section id="response-time" class="section">
-            <h2>Response Time</h2>
-            <p>
-                Responses are typically within 24-48 hours. Early bookings are recommended to secure your preferred date. 
-            </p>
-        </section>
     </main>
 
     <footer class="site-footer">  
