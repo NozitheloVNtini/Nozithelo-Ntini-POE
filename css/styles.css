@@ -540,6 +540,51 @@ img {
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
+/* service search filter */
+.service-search {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+#event-type {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+}
+
+#search-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: #gold;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background-color: #dark-gold;
+}
+
+#recommendation {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #cream;
+  border-radius: 4px;
+  text-align: left;
+}
+
 
 /* Footer*/
 .site-footer {

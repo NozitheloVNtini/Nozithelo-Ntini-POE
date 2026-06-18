@@ -25,15 +25,26 @@
             <hr class="nav-divider">
         </nav>
     </header>
-
+            
     <main> <!--Main element is used to contain the primary content of the webpage for improved structure--> 
         <section id="services-intro" class="section"> <!--Introduction section briefly explains the catering services offered--> 
             <h1>What I Offer</h1>
-            <img src="../assets/tablesetup.jpg" alt="table setup" width="300px" class="section-image">
-            <img src="../assets/presentedplate.png" alt="waiter carrying plate" width="300px" class="section-image">
-            <p>
+                 <p>
                 My services offer versatile and customised food experiences to diverse events.
             </p>
+            <section class="service-search">
+                <h2>Find the Right Service for Your Event</h2>
+                    <div class="search-form">
+                         <input type="text" id="event-type" placeholder="Enter your event type">
+                            <button id="search-btn">Search</button>
+                    </div>
+                        <div id="recommendation"></div>
+            </section>
+
+            <img src="../assets/tablesetup.jpg" alt="table setup" width="300px" class="section-image">
+            <img src="../assets/presentedplate.png" alt="waiter carrying plate" width="300px" class="section-image">
+           
+
         </section>
 
         <section id="private-chef" class="service-item">
