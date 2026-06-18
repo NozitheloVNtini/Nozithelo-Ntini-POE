@@ -351,7 +351,6 @@ img {
   display: flex;
   gap: 30px;
   width: max-content;
-
   animation: marquee 60s linear infinite;
 }
 
@@ -601,6 +600,7 @@ img {
   }
 
   /* when menu is open */
+
 .main-nav.open .nav-links {
   display: flex; 
   max-height: 300px;
