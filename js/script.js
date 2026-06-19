@@ -148,7 +148,7 @@ if (generalForm) {
         const notesValue = notes.value.trim();
 
         const nameRegex = /^[A-Za-z\s'-]+$/;
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/;
         const phoneRegex = /^0\d{9}$/;
 
         if (!nameValue) {
@@ -250,7 +250,7 @@ if (cateringForm) {
         const guestsValue = cGuests.value;
 
         const nameRegex = /^[A-Za-z\s'-]+$/;
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/;
         const phoneRegex = /^0\d{9}$/;
 
         if (!nameValue || !nameRegex.test(nameValue)) {
