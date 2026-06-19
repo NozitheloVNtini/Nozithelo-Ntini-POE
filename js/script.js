@@ -112,234 +112,217 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Contact and enquiry form user interface, validation and success message
-
-
 // General Contact Form Validation
-const form = document.getElementById("general-contact");
+const generalForm = document.getElementById("general-contact");
 
-const fullname = document.getElementById("general-fullname");
-const email = document.getElementById("general-email");
-const phone = document.getElementById("general-phone");
-const notes = document.getElementById("general-notes");
+if (generalForm) {
+    const fullname = document.getElementById("general-fullname");
+    const email = document.getElementById("general-email");
+    const phone = document.getElementById("general-phone");
+    const notes = document.getElementById("general-notes");
 
-// helper: clear old errors
-function clearErrors() {
-    document.querySelectorAll(".error").forEach(el => el.remove());
-
-    [fullname, email, phone, notes].forEach(input => {
-        input.style.border = "";
-    });
-}
-
-// helper: show error under input
-function showError(input, message) {
-    const error = document.createElement("small");
-    error.classList.add("error");
-    error.style.color = "red";
-    error.textContent = message;
-
-    input.style.border = "2px solid red";
-    input.parentNode.appendChild(error);
-}
-
-// validation rules
-function validateForm() {
-    let isValid = true;
-
-    clearErrors();
-
-    // FULL NAME
-    const nameValue = fullname.value.trim();
-    const nameRegex = /^[A-Za-z\s'-]+$/;
-
-    if (nameValue.length === 0) {
-        showError(fullname, "Full name is required.");
-        isValid = false;
-    } else if (nameValue.length < 2) {
-        showError(fullname, "Full name must be at least 2 characters.");
-        isValid = false;
-    } else if (!nameRegex.test(nameValue)) {
-        showError(fullname, "Only letters, spaces, apostrophes and hyphens allowed.");
-        isValid = false;
+    function clearErrors() {
+        document.querySelectorAll(".error").forEach(el => el.remove());
+        [fullname, email, phone, notes].forEach(input => {
+            if (input) input.style.border = "";
+        });
     }
 
-    // EMAIL
-    const emailValue = email.value.trim();
+    function showError(input, message) {
+        const error = document.createElement("small");
+        error.classList.add("error");
+        error.style.color = "red";
+        error.textContent = message;
 
-    if (emailValue.length === 0) {
-        showError(email, "Email address is required.");
-        isValid = false;
-    } else if (!emailValue.includes("@") || emailValue.includes("..")) {
-        showError(email, "Please enter a valid email address.");
-        isValid = false;
+        input.style.border = "2px solid red";
+        input.parentNode.appendChild(error);
     }
 
-    // PHONE
-    const phoneValue = phone.value.trim();
-    const phoneRegex = /^0\d{9}$/;
-
-    if (phoneValue.length === 0) {
-        showError(phone, "Contact number is required.");
-        isValid = false;
-    } else if (!phoneRegex.test(phoneValue)) {
-        showError(phone, "Must start with 0 and be exactly 10 digits.");
-        isValid = false;
-    }
-
-    // MESSAGE (optional but validated if filled)
-    const notesValue = notes.value.trim();
-
-    if (notesValue.length > 0 && notesValue.length < 10) {
-        showError(notes, "Message must be at least 10 characters.");
-        isValid = false;
-    } else if (notesValue.length > 500) {
-        showError(notes, "Message cannot exceed 500 characters.");
-        isValid = false;
-    }
-
-    return isValid;
-}
-
-// submit handler
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    if (validateForm()) {
-        alert("Form submitted successfully!");
-        form.reset();
+    function validateForm() {
+        let isValid = true;
         clearErrors();
-    }
-});
 
-//catering form
-const cateringForm = document.querySelector("#catering-form form");
+        const nameValue = fullname.value.trim();
+        const emailValue = email.value.trim();
+        const phoneValue = phone.value.trim();
+        const notesValue = notes.value.trim();
 
-const cName = document.getElementById("catering-name");
-const cEmail = document.getElementById("catering-email");
-const cPhone = document.getElementById("catering-phone");
-const cDate = document.getElementById("catering-eventdate");
-const cGuests = document.getElementById("catering-guests");
-const cService = document.getElementById("catering-service");
-const cNotes = document.getElementById("catering-notes");
+        const nameRegex = /^[A-Za-z\s'-]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        const phoneRegex = /^0\d{9}$/;
 
-function clearErrors() {
-    document.querySelectorAll(".error").forEach(el => el.remove());
-
-    [cName, cEmail, cPhone, cDate, cGuests, cService, cNotes].forEach(input => {
-        if (input) input.style.border = "";
-    });
-}
-
-function showError(input, message) {
-    const error = document.createElement("small");
-    error.classList.add("error");
-    error.style.color = "red";
-    error.textContent = message;
-
-    input.style.border = "2px solid red";
-    input.parentNode.appendChild(error);
-}
-
-
-//validation
-function validateCateringForm() {
-    let isValid = true;
-
-    clearErrors();
-
-    // NAME
-    const nameValue = cName.value.trim();
-    const nameRegex = /^[A-Za-z\s'-]+$/;
-
-    if (nameValue.length === 0) {
-        showError(cName, "Full name is required.");
-        isValid = false;
-    } else if (!nameRegex.test(nameValue)) {
-        showError(cName, "Only letters, spaces, apostrophes and hyphens allowed.");
-        isValid = false;
-    }
-
-    // EMAIL
-    const emailValue = cEmail.value.trim();
-
-    if (emailValue.length === 0) {
-        showError(cEmail, "Email is required.");
-        isValid = false;
-    } else if (!emailValue.includes("@") || emailValue.includes("..")) {
-        showError(cEmail, "Enter a valid email address.");
-        isValid = false;
-    }
-
-    // PHONE
-    const phoneValue = cPhone.value.trim();
-    const phoneRegex = /^0\d{9}$/;
-
-    if (phoneValue.length === 0) {
-        showError(cPhone, "Contact number is required.");
-        isValid = false;
-    } else if (!phoneRegex.test(phoneValue)) {
-        showError(cPhone, "Must start with 0 and be exactly 10 digits.");
-        isValid = false;
-    }
-
-    // EVENT DATE (FIXED RELIABLY)
-    if (!cDate.value) {
-        showError(cDate, "Event date is required.");
-        isValid = false;
-    } else {
-        const selectedDate = new Date(cDate.value + "T00:00:00");
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-
-        if (selectedDate < today) {
-            showError(cDate, "Event date cannot be in the past.");
+        if (!nameValue) {
+            showError(fullname, "Full name is required.");
+            isValid = false;
+        } else if (!nameRegex.test(nameValue)) {
+            showError(fullname, "Invalid name format.");
             isValid = false;
         }
+
+        if (!emailValue) {
+            showError(email, "Email is required.");
+            isValid = false;
+        } else if (!emailRegex.test(emailValue)) {
+            showError(email, "Invalid email.");
+            isValid = false;
+        }
+
+          if (!phoneValue) {
+              showError(phone, "Phone number is required.");
+              isValid = false;
+          } 
+          else if (!phoneRegex.test(phoneValue)) {
+              showError(phone, "Must start with 0 and be exactly 10 digits.");
+              isValid = false;
+          }
+
+        if (notesValue.length > 0 && notesValue.length < 10) {
+            showError(notes, "Message too short.");
+            isValid = false;
+        }
+
+        return isValid;
     }
 
-    // GUESTS
-    if (cGuests.value === "" || cGuests.value < 1) {
-        showError(cGuests, "Number of guests must be at least 1.");
-        isValid = false;
-    }
-
-    // SERVICE
-    if (cService.value === "") {
-        showError(cService, "Please select a service type.");
-        isValid = false;
-    }
-
-    // NOTES (optional rule)
-    const notesValue = cNotes.value.trim();
-
-    if (notesValue.length > 0 && notesValue.length < 10) {
-        showError(cNotes, "Notes must be at least 10 characters.");
-        isValid = false;
-    }
-
-    return isValid;
-}
-
-
-// submit handler
-if (cateringForm) {
-    cateringForm.addEventListener("submit", function (e) {
+    generalForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        if (validateCateringForm()) {
-            clearErrors();
+        if (!validateForm()) return;
 
-            alert("Catering request submitted successfully!");
+        const data = {
+            general_name: fullname.value,
+            general_email: email.value,
+            general_phone: phone.value,
+            general_notes: notes.value
+        };
 
-            cateringForm.reset();
-        }
+        emailjs.send("service_chefnozy", "template_q6g8fjw", data)
+            .then(() => {
+                alert("Message sent successfully!");
+                generalForm.reset();
+                clearErrors();
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Failed to send message.");
+            });
     });
-} else {
-    console.error("Catering form not found. Check your HTML ID.");
 }
 
 
-//debug
+// Catering Enquiry Form Validation
+const cateringForm = document.querySelector("#catering-form form");
 
-console.log("Catering form script loaded");
+if (cateringForm) {
+
+    const cName = document.getElementById("catering-name");
+    const cEmail = document.getElementById("catering-email");
+    const cPhone = document.getElementById("catering-phone");
+    const cDate = document.getElementById("catering-eventdate");
+    const cGuests = document.getElementById("catering-guests");
+    const cService = document.getElementById("catering-service");
+    const cNotes = document.getElementById("catering-notes");
+
+    function clearErrors() {
+        document.querySelectorAll(".error").forEach(el => el.remove());
+        [cName, cEmail, cPhone, cDate, cGuests, cService, cNotes]
+            .forEach(i => i && (i.style.border = ""));
+    }
+
+    function showError(input, message) {
+        const error = document.createElement("small");
+        error.classList.add("error");
+        error.style.color = "red";
+        error.textContent = message;
+
+        input.style.border = "2px solid red";
+        input.parentNode.appendChild(error);
+    }
+
+    function validateCatering() {
+        let isValid = true;
+        clearErrors();
+
+        const nameValue = cName.value.trim();
+        const emailValue = cEmail.value.trim();
+        const phoneValue = cPhone.value.trim();
+        const dateValue = cDate.value;
+        const guestsValue = cGuests.value;
+
+        const nameRegex = /^[A-Za-z\s'-]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        const phoneRegex = /^0\d{9}$/;
+
+        if (!nameValue || !nameRegex.test(nameValue)) {
+            showError(cName, "Invalid name.");
+            isValid = false;
+        }
+
+        if (!emailValue || !emailRegex.test(emailValue)) {
+            showError(cEmail, "Invalid email.");
+            isValid = false;
+        }
+
+        if (!phoneValue) {
+            showError(cPhone, "Phone number is required.");
+            isValid = false;
+        } 
+        else if (!/^0\d{9}$/.test(phoneValue)) {
+            showError(cPhone, "Must start with 0 and be exactly 10 digits.");
+            isValid = false;
+        }
+
+        // Calculate minimum date (3 days from today)
+            const minDate = new Date();
+            minDate.setDate(minDate.getDate() + 3);
+
+            // Format to YYYY-MM-DD
+            const minDateStr = minDate.toISOString().split('T')[0];
+
+            if (!dateValue) {
+                showError(cDate, "Select date.");
+                isValid = false;
+            } else if (dateValue < minDateStr) {
+                showError(cDate, "Bookings must be at least 3 days from today.");
+                isValid = false;
+}
+        if (guestsValue < 1) {
+            showError(cGuests, "At least 1 guest.");
+            isValid = false;
+        }
+
+        if (!cService.value) {
+            showError(cService, "Select service.");
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    cateringForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (!validateCatering()) return;
+
+        const data = {
+            catering_name: cName.value,
+            catering_email: cEmail.value,
+            catering_phone: cPhone.value,
+            catering_eventdate: cDate.value,
+            catering_guests: cGuests.value,
+            catering_service: cService.value,
+            catering_notes: cNotes.value
+        };
+
+        emailjs.send("service_chefnozy", "template_l02ns5i", data)
+            .then(() => {
+                alert("Catering request sent successfully!");
+                cateringForm.reset();
+                clearErrors();
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Something went wrong.");
+            });
+    });
+}
