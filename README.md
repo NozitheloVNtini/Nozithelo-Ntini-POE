@@ -119,31 +119,31 @@ Part 2 and Part 3 will include further development, styling and advanced functio
 * Added Media Queries to make the website responsive
 
 **Version 3.0 - Final POE Submission**
-Navigation and UX Improvements
+**Navigation and UX Improvements**
 * Fixed desktop navigation visibility issues
 * Implemented mobile hamburger menu functionality
 * Improved navbar usability and interaction flow
 * Added sticky navigation with scroll-based behaviour using JavaScript
 * Enhanced navigation hover effects and active page highlighting
-Interactive Features
+**Interactive Features**
 * Added gallery lightbox functionality for image viewing
 * Implemented event type search feature with service recommendations
 * Added cost estimator for event pricing based on guest input
 * Improved form interactivity and user feedback systems
 * Enhanced overall user experience with dynamic JavaScript features
-Form Validation and Email Integration
+**Form Validation and Email Integration**
 * Implemented client-side validation for contact and catering enquiry forms
 * Added custom error messages for improved user guidance
 * Strengthened email validation with improved domain format checking
 * Added event date validation and input constraints
 * Integrated EmailJS for automated form submission handling
 * Improved success and error feedback responses for users
-UI Refinements and Fixes
+**UI Refinements and Fixes**
 * Fixed hamburger menu toggle inconsistencies
 * Improved styling consistency between service search and cost estimator
 * Removed unwanted background styling in search results
 * Fixed minor layout and UI bugs across multiple pages
-SEO Optimisation
+**SEO Optimisation**
 * Added unique title tags for all pages
 * Implemented meta descriptions for improved search visibility
 * Added meta keywords for SEO categorisation
