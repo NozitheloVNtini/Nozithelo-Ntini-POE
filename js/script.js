@@ -24,11 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
-// Contact form user interface, validation and success message
-
 //gallery lighbox
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox");
@@ -117,3 +112,102 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Contact and enquiry form user interface, validation and success message
+
+
+// General Contact Form Validation
+const form = document.getElementById("general-contact");
+
+const fullname = document.getElementById("general-fullname");
+const email = document.getElementById("general-email");
+const phone = document.getElementById("general-phone");
+const notes = document.getElementById("general-notes");
+
+// helper: clear old errors
+function clearErrors() {
+    document.querySelectorAll(".error").forEach(el => el.remove());
+
+    [fullname, email, phone, notes].forEach(input => {
+        input.style.border = "";
+    });
+}
+
+// helper: show error under input
+function showError(input, message) {
+    const error = document.createElement("small");
+    error.classList.add("error");
+    error.style.color = "red";
+    error.textContent = message;
+
+    input.style.border = "2px solid red";
+    input.parentNode.appendChild(error);
+}
+
+// validation rules
+function validateForm() {
+    let isValid = true;
+
+    clearErrors();
+
+    // FULL NAME
+    const nameValue = fullname.value.trim();
+    const nameRegex = /^[A-Za-z\s'-]+$/;
+
+    if (nameValue.length === 0) {
+        showError(fullname, "Full name is required.");
+        isValid = false;
+    } else if (nameValue.length < 2) {
+        showError(fullname, "Full name must be at least 2 characters.");
+        isValid = false;
+    } else if (!nameRegex.test(nameValue)) {
+        showError(fullname, "Only letters, spaces, apostrophes and hyphens allowed.");
+        isValid = false;
+    }
+
+    // EMAIL
+    const emailValue = email.value.trim();
+
+    if (emailValue.length === 0) {
+        showError(email, "Email address is required.");
+        isValid = false;
+    } else if (!emailValue.includes("@") || emailValue.includes("..")) {
+        showError(email, "Please enter a valid email address.");
+        isValid = false;
+    }
+
+    // PHONE
+    const phoneValue = phone.value.trim();
+    const phoneRegex = /^0\d{9}$/;
+
+    if (phoneValue.length === 0) {
+        showError(phone, "Contact number is required.");
+        isValid = false;
+    } else if (!phoneRegex.test(phoneValue)) {
+        showError(phone, "Must start with 0 and be exactly 10 digits.");
+        isValid = false;
+    }
+
+    // MESSAGE (optional but validated if filled)
+    const notesValue = notes.value.trim();
+
+    if (notesValue.length > 0 && notesValue.length < 10) {
+        showError(notes, "Message must be at least 10 characters.");
+        isValid = false;
+    } else if (notesValue.length > 500) {
+        showError(notes, "Message cannot exceed 500 characters.");
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+// submit handler
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (validateForm()) {
+        alert("Form submitted successfully!");
+        form.reset();
+        clearErrors();
+    }
+});
