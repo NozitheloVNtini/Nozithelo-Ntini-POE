@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//gallery lighbox
+//gallery lightbox
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");

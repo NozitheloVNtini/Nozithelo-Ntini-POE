@@ -230,7 +230,10 @@ img {
 
 /* Sections */
 .section {
-  padding: 20px 10%;
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 0 5%;
+  box-sizing: border-box;
 }
 
 #intro {
@@ -797,6 +800,10 @@ select {
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.2rem; }
 
+  
+.section {
+    max-width: 1200px;
+  }
   .hero-text { font-size: 2rem; padding: 0 10px; }
 
   .nav-links {
