@@ -60,13 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
       let recommendation = "";
 
       // Define service recommendations
-      if (["wedding", "birthday", "corporate", "conference"].includes(eventType)) {
+      if (["wedding", "birthday", "corporate", "conference", "buffet", "catering"].includes(eventType)) {
         recommendation = `
           <h3>Recommended Service:</h3>
           <p>Event Catering</p>
           <p>Perfect for weddings, celebrations and large gatherings.</p>
         `;
-      } else if (["anniversary", "romantic dinner", "date night"].includes(eventType)) {
+      } else if (["anniversary", "dinner", "date night", "date"].includes(eventType)) {
         recommendation = `
           <h3>Recommended Service:</h3>
           <p>Private Chef Experience</p>
@@ -85,6 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       recommendationDiv.innerHTML = recommendation;
+
+      // Toggle the has-results class based on whether there's content
+  if (recommendation && recommendation.trim() !== "<p>Please select a valid event type to get recommendations.</p>") {
+    recommendationDiv.classList.add("has-results");
+  } else {
+    recommendationDiv.classList.remove("has-results");
+  }
+
     });
 
     // Allow Enter key to trigger search
