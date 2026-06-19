@@ -163,9 +163,9 @@ if (generalForm) {
             showError(email, "Email is required.");
             isValid = false;
         } else if (!emailRegex.test(emailValue)) {
-            showError(email, "Invalid email.");
+            showError(email, "Invalid email format. Ensure it includes a valid domain like .com or .co.za");
             isValid = false;
-        }
+}
 
           if (!phoneValue) {
               showError(phone, "Phone number is required.");
@@ -258,10 +258,13 @@ if (cateringForm) {
             isValid = false;
         }
 
-        if (!emailValue || !emailRegex.test(emailValue)) {
-            showError(cEmail, "Invalid email.");
-            isValid = false;
-        }
+        if (!emailValue) {
+          showError(cEmail, "Email is required.");
+          isValid = false;
+      } else if (!emailRegex.test(emailValue)) {
+          showError(cEmail, "Invalid email format. Ensure it includes a valid domain like .com or .co.za");
+          isValid = false;
+}
 
         if (!phoneValue) {
             showError(cPhone, "Phone number is required.");
